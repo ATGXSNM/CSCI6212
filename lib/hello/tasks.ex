@@ -1,12 +1,12 @@
-defmodule Todo.Tasks do
+defmodule Hello.Tasks do
   @moduledoc """
   The Tasks context.
   """
 
   import Ecto.Query, warn: false
-  alias Todo.Repo
+  alias Hello.Repo
 
-  alias Todo.Tasks.Task
+  alias Hello.Tasks.Task
 
   @doc """
   Returns the list of tasks.
