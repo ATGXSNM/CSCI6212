@@ -1,8 +1,8 @@
-defmodule TodoWeb.TaskController do
-  use TodoWeb, :controller
+defmodule HelloWeb.TaskController do
+  use HelloWeb, :controller
 
-  alias Todo.Tasks
-  alias Todo.Tasks.Task
+  alias Hello.Tasks
+  alias Hello.Tasks.Task
 
   def index(conn, _params) do
     tasks = Tasks.list_tasks()
