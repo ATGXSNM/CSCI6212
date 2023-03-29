@@ -1,7 +1,7 @@
-defmodule TodoWeb.TaskControllerTest do
-  use TodoWeb.ConnCase
+defmodule HelloWeb.TaskControllerTest do
+  use HelloWeb.ConnCase
 
-  import Todo.TasksFixtures
+  import Hello.TasksFixtures
 
   @create_attrs %{completed: true, text: "some text"}
   @update_attrs %{completed: false, text: "some updated text"}
