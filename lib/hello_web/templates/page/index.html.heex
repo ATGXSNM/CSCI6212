@@ -1,0 +1,65 @@
+      <section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "ElixCollab" %></h1>
+  <p>CSCI6221 Elixir Group project</p>
+  <p>Team member: </p>
+</section>
+
+<section class="phx-hero">
+  <h1><%= gettext "Group member task view %{name}!", name: "" %></h1>
+  <p>you can see each member working</p>
+</section>
+
+<div class="row">
+  <div class = "column cloumn-60 cloumn-offset-20">
+  <div class = "row">
+  <div class = " column cloumn-80 cloumn-offset-10">
+  <h1> Password Generator</h1>
+
+</div>
+</div>
+<input type ="text" value=""/>
+
+<.form let={f} for = {:Password} action = {"/"}>
+<div class="row">
+  <div class = "column">
+  <%= label f, :Password_length, "Password Length: " %>
+</div>
+<div class ="column">
+<%= select f, :length, [], class: "float-right" %>
+</div>
+</div>
+
+<div class="row">
+  <div class = "column">
+  <%= label f, :uppercase, "Include Uppercase Characters: " %>
+</div>
+<div class ="column">
+<%= checkbox f, :uppercase %>
+(Example: ABCDEFG)
+</div>
+</div>
+
+<div class="row">
+  <div class = "column">
+  <%= label f, :symbols, "Include Symbols: " %>
+</div>
+<div class ="column">
+<%= checkbox f, :symbols %>
+(Example: @$%!)
+</div>
+</div>
+
+<div class="row">
+  <div class = "column">
+  <%= label f, :numbers, "Include numbers: " %>
+</div>
+<div class ="column">
+<%= checkbox f, :numbers %>
+(Example: 1234567890)
+</div>
+</div>
+
+
+</.form>
+</div>
+</div>
