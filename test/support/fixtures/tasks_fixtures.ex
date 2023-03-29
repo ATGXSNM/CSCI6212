@@ -1,7 +1,7 @@
-defmodule Todo.TasksFixtures do
+defmodule Hello.TasksFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Todo.Tasks` context.
+  entities via the `Hello.Tasks` context.
   """
 
   @doc """
@@ -14,7 +14,7 @@ defmodule Todo.TasksFixtures do
         completed: true,
         text: "some text"
       })
-      |> Todo.Tasks.create_task()
+      |> Hello.Tasks.create_task()
 
     task
   end
