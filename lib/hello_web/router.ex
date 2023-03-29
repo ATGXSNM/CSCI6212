@@ -47,6 +47,7 @@ defmodule HelloWeb.Router do
     pipe_through :browser
     get "/", HelloController, :index
     get "/:name", HelloController, :show
+    resources "/tasks", TaskController
   end
 
   # Enables the Swoosh mailbox preview in development.
