@@ -1,12 +1,12 @@
-defmodule Todo.TasksTest do
-  use Todo.DataCase
+defmodule Hello.TasksTest do
+  use Hello.DataCase
 
-  alias Todo.Tasks
+  alias Hello.Tasks
 
   describe "tasks" do
-    alias Todo.Tasks.Task
+    alias Hello.Tasks.Task
 
-    import Todo.TasksFixtures
+    import Hello.TasksFixtures
 
     @invalid_attrs %{completed: nil, text: nil}
 
