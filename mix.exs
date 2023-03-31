@@ -1,9 +1,9 @@
-defmodule Hello.MixProject do
+defmodule Todo.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :hello,
+      app: :todo,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Hello.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Hello.Application, []},
+      mod: {Todo.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -33,7 +33,7 @@ defmodule Hello.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.6.10"},
+      {:phoenix, "~> 1.6.16"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},

@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :hello, Hello.Repo,
+config :todo, Todo.Repo,
   username: "postgres",
   password: "970417",
   hostname: "localhost",
-  database: "hello_dev",
+  database: "todo_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,14 +16,14 @@ config :hello, Hello.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :hello, HelloWeb.Endpoint,
+config :todo, TodoWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "X8EWTw/fNGRHIZsSNYcRy7aoVmNflxPDD9XxaBU69l+t3E1Au7anWarTvI4nWwJw",
+  secret_key_base: "37hmbhxNWu2kS0pzyPigDK/1nNoENeTAOK41fQqHaxb1+uCPfCpGzje1TvB3UWKb",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -54,13 +54,13 @@ config :hello, HelloWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :hello, HelloWeb.Endpoint,
+config :todo, TodoWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/hello_web/(live|views)/.*(ex)$",
-      ~r"lib/hello_web/templates/.*(eex)$"
+      ~r"lib/todo_web/(live|views)/.*(ex)$",
+      ~r"lib/todo_web/templates/.*(eex)$"
     ]
   ]
 

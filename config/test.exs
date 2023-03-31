@@ -5,23 +5,23 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :hello, Hello.Repo,
+config :todo, Todo.Repo,
   username: "postgres",
   password: "970417",
   hostname: "localhost",
-  database: "hello_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "todo_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :hello, HelloWeb.Endpoint,
+config :todo, TodoWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "T2G/z/ywID+VQADVHmOE8Pb0lhEyfoCnQw/3kJ7uBQOyxiJUv81Lh6Dmnb7STETm",
+  secret_key_base: "D3rCAgpsrFHAONb8UXeXPVpOwQBshQdOQ5UxiCdubkGOhERcBCbTUPNxcNV+xIFM",
   server: false
 
 # In test we don't send emails.
-config :hello, Hello.Mailer, adapter: Swoosh.Adapters.Test
+config :todo, Todo.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

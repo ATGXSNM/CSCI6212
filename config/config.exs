@@ -7,15 +7,15 @@
 # General application configuration
 import Config
 
-config :hello,
-  ecto_repos: [Hello.Repo]
+config :todo,
+  ecto_repos: [Todo.Repo]
 
 # Configures the endpoint
-config :hello, HelloWeb.Endpoint,
+config :todo, TodoWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Hello.PubSub,
-  live_view: [signing_salt: "PDrdc97b"]
+  render_errors: [view: TodoWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Todo.PubSub,
+  live_view: [signing_salt: "IJXPe7fh"]
 
 # Configures the mailer
 #
@@ -24,7 +24,7 @@ config :hello, HelloWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :hello, Hello.Mailer, adapter: Swoosh.Adapters.Local
+config :todo, Todo.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
