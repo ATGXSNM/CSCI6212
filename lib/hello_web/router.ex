@@ -17,6 +17,7 @@ defmodule HelloWeb.Router do
 
   scope "/", HelloWeb do
     pipe_through :browser
+    get "/auth/google/callback", GoogleAuthController, :index
 
     get "/", PageController, :index
   end
